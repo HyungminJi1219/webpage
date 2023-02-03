@@ -1,0 +1,78 @@
+<!--
+ * DESIGN NOTICE
+ * Lots of design elements are from Bootstrap!
+ * Bootstrap v5.0.2 (https://getbootstrap.com/)
+ * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+-->
+{% extends "layout.html" %}
+{% block content %}
+
+
+  <div class="alert alert-primary" role="alert">
+    Thank you for your interest. Please fill out the form below.
+  </div>
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-3">Contact Me!</legend>
+                
+                <div class="form-group">
+                    {{ form.name.label(class="form-control-label") }}
+                    {% if form.name.errors %}
+                        {{ form.name(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.name.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.name(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    {{ form.email.label(class="form-control-label") }}
+                    {% if form.email.errors %}
+                        {{ form.email(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                    <div class="input-group mb-2 mr-sm-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">@</div>
+                        </div>
+                        {{ form.email(class="form-control form-control-lg") }}
+                      </div>
+                    {% endif %}
+                    <small id="emailHelp" class="form-text text-muted">Email address is only for responding.</small>
+                  </div>
+                  <div class="mb-3">
+                    <label for="Message" class="form-label">Example textarea</label>
+                    {{ form.message.label(class="form-control-label", id="floatingTextarea") }}
+                    {% if form.message.errors %}
+                        {{ form.message(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.message.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.message(class="form-control form-control-lg") }}
+                    {% endif %}
+                  </div>
+
+                <label for="customRange1" class="form-label">How much are you satisfied?</label>
+<input type="range" class="form-range" id="customRange1">
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}

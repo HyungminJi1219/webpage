@@ -1,0 +1,61 @@
+<!--
+ * DESIGN NOTICE
+ * Lots of design elements are from Bootstrap!
+ * Bootstrap v5.0.2 (https://getbootstrap.com/)
+ * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+-->
+
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Hello! </h1>
+    <h3> I'm Hyungmin, majoring Computer Science at University of Michigan</h3>
+    <p class="lead">
+      <a class="btn btn-outline-primary" href="/construction2">한국어 (Korean)</a>
+    </p>
+
+
+    <div class="h4 pb-2 mb-4 text-info border-bottom border-light">
+      School Project Highlights!
+    </div>
+    <div class="jumbotron">
+        <h4 class="display-4">EECS 281</h1>
+        <p class="lead">Data Structure and Algorithms</p>
+        <hr class="my-4">
+        <p>BFS,DFS,TSP,Hash tables,Queues,Stack.. </p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="/construction">Learn more</a>
+        </p>
+      </div>
+
+    <div class="jumbotron">
+        <h4 class="display-4">EECS 370</h1>
+        <p class="lead">Computer Organization</p>
+        <hr class="my-4">
+        <p>Assembler,Simulator,Pipeline,Cache.. </p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="/construction2" role="button">Learn more</a>
+        </p>
+      </div>
+
+      <div class="h4 pb-2 mb-3 text-info border-bottom border-light">
+        Personal Project Highlights
+      </div>
+      <div class="jumbotron">
+          <h4 class="display-4">Twitter chatbot</h1>
+          <p class="lead">Machine Learning</p>
+          <hr class="my-4">
+          <p>Python </p>
+          <p class="lead">
+            <a class="btn btn-primary btn-lg" href="/underconstruction" role="button">Learn more</a>
+          </p>
+        </div>
+        <div class="jumbotron">
+          <h4 class="display-4">Personal Website</h1>
+          <p>Using Flask, HTML, CSS, SQL (for database!) </p>
+          </p>
+        </div>
+
+
+
+{% endblock content %}
