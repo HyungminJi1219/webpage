@@ -1,3 +1,5 @@
-\used bootstrap for some of the style components.
+Used Flask (python) for back-end
 
-Mentioned at each of the HTML page. 
+Used Boostrap, HTML, CSS for front-end.
+
+More functionality would come; 
